@@ -25,7 +25,7 @@ with tf.Session() as sess:
              {'DecodeJpeg/contents:0': image_data})
 
     # Sort to show labels of first prediction in order of confidence
-    top_k = predictions[0].argsort()[-len(predictions[0]):][::-1]
+    top_k = predictions[0].argsort()[-len(predictions[0]):]
 
     for node_id in top_k:
         human_string = label_lines[node_id]
